@@ -1,3 +1,7 @@
+# Introduction
+In application is  Progressive Web Aapplication using React. It uses custom service workers and use a JSON Manifest to provide native-like capabilities and reliability with caching and offline mode.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
