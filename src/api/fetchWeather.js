@@ -1,10 +1,9 @@
 import axios from 'axios';
-import PropTypes from 'prop-types';
 
 const URL = process.env.REACT_APP_URL;
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-const fetchWeather = async (query) => {
+export const fetchWeather = async (query) => {
   const { data } = await axios
     .get(URL, {
       params: {
@@ -18,9 +17,3 @@ const fetchWeather = async (query) => {
     });
   return data;
 };
-
-fetchWeather.propTypes = {
-  query: PropTypes.string
-};
-
-export default fetchWeather;

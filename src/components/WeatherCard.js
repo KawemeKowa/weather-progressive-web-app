@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const WeatherCard = ({ weather, error }) => {
   if (!error) {
@@ -27,6 +28,11 @@ const WeatherCard = ({ weather, error }) => {
   } else {
     return <h2 className="error">Invalid search parameter</h2>;
   }
+};
+
+WeatherCard.propTypes = {
+  weather: PropTypes.object,
+  error: PropTypes.bool
 };
 
 export default WeatherCard;
