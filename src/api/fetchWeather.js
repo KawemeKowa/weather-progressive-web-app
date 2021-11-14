@@ -20,7 +20,7 @@ const fetchWeather = async (query) => {
 };
 
 fetchWeather.propTypes = {
-  name: PropTypes.string
+  query: PropTypes.string
 };
 
 export default fetchWeather;
