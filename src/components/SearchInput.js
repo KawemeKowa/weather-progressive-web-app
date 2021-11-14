@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { fetchWeather } from '../api/fetchWeather';
+import fetchWeather from '../api/fetchWeather';
 import '../App.css';
 
-const SearchInput = ({ setWeather }) => {
+const SearchInput = ({ setWeather, setError }) => {
   const [query, setQuery] = useState('');
 
   const search = async (e) => {
-    if (e.key === 'Enter') {
-      const data = await fetchWeather(query);
-      setWeather(data);
+    try {
+      if (e.key === 'Enter') {
+        const data = await fetchWeather(query);
+        setWeather(data);
+        setQuery('');
+        setError(false);
+      }
+    } catch {
       setQuery('');
+      setError(true);
     }
   };
 

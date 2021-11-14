@@ -10,7 +10,6 @@ it('renders correctly', () => {
 
   fireEvent.change(searchtext, { target: { value: 'Lusaka' } });
   expect(searchtext.value).toContain('Lusaka');
-
 });
 
 //Verify that the fetchWeather function is not called when query is empty
